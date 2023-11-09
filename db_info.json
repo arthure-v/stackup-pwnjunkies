@@ -1,0 +1,43 @@
+{
+    "dummy_values" : {
+        "product":{
+            "products_id":"PR00001",
+            "product_grp_id":"PRGP001",
+            "product_name":"Valorant Premium Giftcard",
+            "original_price":10,
+            "discount_price":5,
+            "stock":8,
+            "image":"dummy_image_url"
+        },
+    
+        "admin_register":{
+            "admin_id":"ADMN001",
+            "first_name":"John",
+            "last_name":"Doe",
+            "email":"johndoe123@example.com",
+            "password":""
+        },
+    
+        "customer_register":{
+            "customer_id":"CU00001",
+            "first_name":"Bob",
+            "last_name":"John",
+            "email":"bobjohn123@example.com",
+            "password":" ", 
+            "phone_number":7559855218,
+            "country":"India",
+            "state":"kerala",
+            "district":"idukki",
+            "building_name":"kara house",
+            "pincode":"671543"
+    
+        },
+    
+        "cart":{
+            "customer_id":"PR00001",
+            "product_id":"CU00001",
+            "quantity":"2"
+        }
+    
+    }
+}
