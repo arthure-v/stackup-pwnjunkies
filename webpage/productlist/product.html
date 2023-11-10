@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="product.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="container1">
+                    <h3>Product View</h3>
+                    <img src="shoe3.jpg" alt="Product Image">
+                    <div class="product-details">
+                        <h2 class="product-title">Product Name</h2>
+                        <p class="product-description">Product description goes here. You can provide details about the product.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container2">
+                    <h3>Select a Price</h3>
+                    <form>
+                        <label for="priceSelection">Select a Price:</label>
+                        <select id="priceSelection">
+                            <option value="19.99">$19.99</option>
+                            <option value="29.99">$29.99</option>
+                            <option value="39.99">$39.99</option>
+                        </select>
+                    </form>
+                    <h2 id="selectedPrice">Selected Price: </h2>
+                    <!-- You can add additional actions or content here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript to handle price selection
+        const priceSelection = document.getElementById("priceSelection");
+        const selectedPriceElement = document.getElementById("selectedPrice");
+
+        priceSelection.addEventListener("change", () => {
+            selectedPriceElement.textContent = "Selected Price: " + priceSelection.value;
+        });
+    </script>
+</body>
+</html>
