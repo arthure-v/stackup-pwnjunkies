@@ -1,0 +1,40 @@
+.AdminList{
+    display:flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.Adminbold{
+    font-weight: bold;
+    font-size: large;
+}
+
+.Adminhead {
+  font-size: 34px; 
+  padding: 35px;
+}
+.AdmBtn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff; 
+    font-size: 18px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out; 
+    margin-top: 30px;
+  }
+  
+  .AdBtn:hover {
+    background-color: #0056b3; 
+  }
+  
+
+.free{
+    padding:0 4px 50px 5px;
+  }
+

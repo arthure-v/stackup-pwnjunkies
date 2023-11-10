@@ -1,0 +1,44 @@
+/* ProductView.css */
+.product-view {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .product-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .select-price-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .price-options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .price-option {
+    margin-bottom: 5px;
+  }
+  
+  .price-radio {
+    margin-right: 10px;
+  }
+  
+  .selected-price-details {
+    margin-top: 20px;
+  }
+  
+  .selected-price-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .selected-price-value {
+    font-size: 24px;
+    color: #007bff;
+  }
+  

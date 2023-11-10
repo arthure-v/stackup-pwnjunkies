@@ -1,0 +1,48 @@
+/* Default styles for all screen sizes */
+.List1, .List2 {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-left: 50px; /* Add padding-left to both List1 and List2 */
+    padding-right: 50px; /* Add padding-right to both List1 and List2 */
+}
+
+/* Default styles for h3 elements */
+.bold h3 {
+    font-size: 36px;
+}
+.Yourcartname{
+    padding-top: 100px;
+    color: black;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+/* Media query for screens up to 767px wide (typical mobile screens) */
+@media (max-width: 767px) {
+    .List1, .List2 {
+        justify-content: space-around;
+        padding-left: 0; /* Adjust as needed */
+        padding-right: 0; /* Adjust as needed */
+    }
+
+    .cart-button {
+        text-align: center;
+        padding: 20px;
+        justify-content: center;
+        padding-left: 0; /* Adjust as needed */
+    }
+
+    .bold h3 {
+        font-size: smaller; /* Adjust the size as needed */
+    }
+
+    .Yourcartname {
+        margin-top: 40px;
+        padding-top: 40px;
+        font-weight: 500;
+        font-size: 40px;
+        color: black;
+    }
+}

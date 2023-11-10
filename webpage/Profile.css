@@ -1,14 +1,21 @@
-body {
-    margin: 150px;
-    padding-top: 40px;
-    color: #2e323c;
-    background: #f5f6fa;
-    position: relative;
-    height: 100%;
-}
-
+/* Default styles */
 .form-group {
     margin: 0rem;
+    margin-bottom: 15px;
+
+}
+
+
+.form-group label {
+    text-align: right;
+    display: block;
+    margin-bottom: 5px;
+    width: 15px;
+    margin-left: 120px;
+}
+
+.rowgutters {
+    margin: 0px 400px;
 }
 
 .text-left {
@@ -72,7 +79,11 @@ body {
     border-radius: 2px;
     font-size: 0.825rem;
     background: #ffffff;
-    color: #2e323c;
+    color: #000000;
+    margin: 0px;
+    width: 300px;
+    margin-left: 300px;
+    margin-top: 33px;
 }
 
 .card {
@@ -82,4 +93,35 @@ body {
     border-radius: 5px;
     border: 0;
     margin-bottom: 1rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .text-left,
+    .text-right {
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    .rowgutters {
+        margin: 0;
+    }
+
+    .form-control {
+        margin-left: 20px;
+        width: 100%;
+    }
+    .user-avatar{
+        display:flex;
+        justify-content: center;
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-left,
+    .text-right {
+        padding-left: 10px;
+        padding-top: 10px;
+    }
 }
