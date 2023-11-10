@@ -3,10 +3,10 @@
 Long Description about project. This project do that. This project is awesome...
 
 ## Team members
-1. [Nikhil M] (https://github.com/Nikhil-Melath)
-2. [Adithyan KK] (https://github.com/Adithyankk)
-3. [Arthure Antony] (https://github.com/arthure-v)
-4. [Yadhukrishna K] (https://github.com/yadhu27)
+1. [Nikhil M](https://github.com/Nikhil-Melath)
+2. [Adithyan KK](https://github.com/Adithyankk)
+3. [Arthure Antony](https://github.com/arthure-v)
+4. [Yadhukrishna K](https://github.com/yadhu27)
 
 ## Team Id
 pwnjunkies
