@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .add-item-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .edit-btn, .delete-btn {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .edit-btn:hover, .delete-btn:hover {
+            background-color: #0b7dda;
+        }
+
+        .save-btn, .update-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Group ID</th>
+                <th>Product Name</th>
+                <th>Image</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be added dynamically using JavaScript -->
+        </tbody>
+    </table>
+    <button class="add-item-btn" onclick="addProductRow()">Add More Items</button>
+    <button class="save-btn" onclick="saveProducts()">Save</button>
+    <div id="savedList"></div>
+    <button class="update-btn" onclick="updateMainPage()">Update Main Page</button>
+
+    <script>
+        let productsData = [];
+        let editMode = false;
+
+        function addProductRow() {
+            const tableBody = document.querySelector('#productTable tbody');
+
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td><input type="text" name="productId[]" readonly /></td>
+                <td><input type="text" name="productGroupId[]" readonly /></td>
+                <td><input type="text" name="productName[]" readonly /></td>
+                <td><input type="text" name="productImage[]" readonly /></td>
+                <td><input type="text" name="productStock[]" readonly /></td>
+                <td>
+                    <button class="edit-btn" onclick="editRow(this)">Edit</button>
+                    <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                </td>
+            `;
+
+            tableBody.appendChild(newRow);
+        }
+
+        function editRow(button) {
+            const row = button.closest('tr');
+            const inputs = row.querySelectorAll('input');
+
+            inputs.forEach(input => {
+                input.readOnly = false;
+            });
+
+            button.innerHTML = "Save";
+            button.classList.remove("edit-btn");
+            button.classList.add("save-btn");
+            button.onclick = function() {
+                saveRow(this);
+            };
+        }
+
+        function saveRow(button) {
+            const row = button.closest('tr');
+            const inputs = row.querySelectorAll('input');
+            const product = {};
+
+            inputs.forEach(input => {
+                input.readOnly = true;
+                product[input.name] = input.value;
+            });
+
+            button.innerHTML = "Edit";
+            button.classList.remove("save-btn");
+            button.classList.add("edit-btn");
+            button.onclick = function() {
+                editRow(this);
+            };
+
+            productsData.push(product);
+        }
+
+        function deleteRow(button) {
+            const row = button.closest('tr');
+            row.remove();
+        }
+
+        function saveProducts() {
+            const tableRows = document.querySelectorAll('#productTable tbody tr');
+            const savedList = document.getElementById('savedList');
+
+            productsData = [];
+
+            tableRows.forEach(row => {
+                const inputs = row.querySelectorAll('input');
+                const product = {};
+
+                inputs.forEach(input => {
+                    product[input.name] = input.value;
+                });
+
+                productsData.push(product);
+            });
+
+            savedList.innerHTML = "<h3>Saved Products:</h3>";
+
+            productsData.forEach(product => {
+                const listItem = document.createElement('div');
+                listItem.innerHTML = `
+                    <strong>Product ID:</strong> ${product['productId']} |
+                    <strong>Product Group ID:</strong> ${product['productGroupId']} |
+                    <strong>Product Name:</strong> ${product['productName']} |
+                    <strong>Image:</strong> ${product['productImage']} |
+                    <strong>Stock:</strong> ${product['productStock']}
+                `;
+                savedList.appendChild(listItem);
+            });
+        }
+
+        function updateMainPage() {
+            const tableBody = document.querySelector('#productTable tbody');
+            tableBody.innerHTML = "";
+
+            productsData.forEach(product => {
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td><input type="text" name="productId[]" value="${product['productId']}" readonly /></td>
+                    <td><input type="text" name="productGroupId[]" value="${product['productGroupId']}" readonly /></td>
+                    <td><input type="text" name="productName[]" value="${product['productName']}" readonly /></td>
+                    <td><input type="text" name="productImage[]" value="${product['productImage']}" readonly /></td>
+                    <td><input type="text" name="productStock[]" value="${product['productStock']}" readonly /></td>
+                    <td>
+                        <button class="edit-btn" onclick="editRow(this)">Edit</button>
+                        <button class="delete-btn" onclick="deleteRow(this)">Delete</button>
+                    </td>
+                `;
+                tableBody.appendChild(newRow);
+            });
+        }
+    </script>
+</body>
+</html>
