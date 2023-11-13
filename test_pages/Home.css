@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 5px 2px 5px 5px;
+
+}
+
+
+.Buy-Button{
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.iconss, .iconss{
+  width: 34px;
+  height: 30px;
+  max-width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #01C6AE;
+}
+
+.Container-Home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.items {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.items img {
+  width: 12rem;
+  height: 15rem;
+}
+
+@media (min-width: 768px) {
+.wrapper{
+  text-align: right;
+
+  display:flex;
+  justify-content:flex-end;
+  gap: 4rem;
+  height: 180px;
+  width:100%;
+  align-items: center;
+  
+}
+}
+
+.iconss{
+  margin-right: 20px;
+ 
+}
+.mainlogo{
+  display: flex;
+  align-items: center;
+
+}
+
+.iconsss{
+  margin-left: 15px;
+  height: 80px;
+  width: 80px;
+}
+
+
+
+/* Media query for screens up to 768px wide (typical tablets and mobiles) */
+@media (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 210px;
+    justify-content: space-around;
+    align-items: center;
+  }
+ 
+  .item {
+    width: 100%;
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .Container-Home{
+    padding-top:90px;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .wrapper {
+    text-align: right;
+  
+  }
+}
+
+
+
+.material-icons{
+  width: 20px;
+  height: 10px;
+  display:flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .searchButton3 {
+    width: 18px; 
+    height: 18px; 
+    bottom: 25px;
+
+  }
+
+  .searchInput3 {
+    width: 80px; 
+    font-size: 14px;
+    padding-bottom: 33px;
+    padding-left: 7px;
+
+  }
+}
+
+.Viewmore-Button{
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+.Viewmore{
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+.mainpage{
+  display:flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+.iconsss{
+  height: 80px;
+  width: 80px;
+}
+
+}

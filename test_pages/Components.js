@@ -42,5 +42,5 @@ function Components() {
   )
 }
 
-export default Components
+export default Components;
 

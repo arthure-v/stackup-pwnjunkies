@@ -1,0 +1,86 @@
+.profile-body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    column-gap: 4rem;
+}
+
+.profile-section, .billing-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.form-group-profile {
+    margin-bottom: 20px;
+}
+
+.profile-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.profile-input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.profile-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.personal-details-heading {
+    color: black;
+}
+
+.profile-heading {
+    text-align: center;
+}
+
+.profile-body {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .profile-body {
+        flex-direction: column;
+        height:100%;
+    }
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-section, .billing-section {
+        width: 80%;
+        margin: 20px; 
+        padding: 20px;
+    }
+}
+

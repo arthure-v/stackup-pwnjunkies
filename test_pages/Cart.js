@@ -1,8 +1,9 @@
 import React from 'react'
-import Components from './Components';
 import "./Cart.css";
-import Hline from './Hline';
+import Navbar from './Navbar';
 import{ useState } from 'react';
+import Home from './Home';
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
@@ -17,7 +18,7 @@ const Cart = () => {
 
   return (
     <div>
-      <Components/>
+      <Navbar/>
       <h1 className="Yourcartname">Your Cart</h1>
       <div className="List1">
         <h3 className="bold">Items</h3>
@@ -33,11 +34,11 @@ const Cart = () => {
           <h3 className="bold">${item.price * item.quantity}</h3>
         </div>
       ))}
-      <div className="cart-button">
-        <button>Proceed to Checkout</button>
-        <button>Buy More</button>
+      <div className="Cart-button-section">
+      <Link to="">  <button className='Cart-button'>Proceed to Checkout</button> </Link> 
+      <Link to="/Home">  <button className='Cart-button'>Buy More</button> </Link>
       </div>
-      <div className="cart-total">
+      <div className="Cart-total">
         <h2>Total: ${calculateTotal()}</h2>
       </div>
     </div>

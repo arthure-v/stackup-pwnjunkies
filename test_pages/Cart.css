@@ -1,13 +1,12 @@
-/* Default styles for all screen sizes */
 .List1, .List2 {
     display: flex;
     justify-content: space-around;
     padding-top: 20px;
-    padding-left: 50px; /* Add padding-left to both List1 and List2 */
-    padding-right: 50px; /* Add padding-right to both List1 and List2 */
+    padding-left: 50px; 
+    padding-right: 50px;
 }
 
-/* Default styles for h3 elements */
+
 .bold h3 {
     font-size: 36px;
 }
@@ -19,23 +18,49 @@
     justify-content: center;
 }
 
-/* Media query for screens up to 767px wide (typical mobile screens) */
+.Cart-button-section {
+    text-align: center;
+    padding: 40px;
+    justify-content: center;
+    padding-left: 0; 
+    
+}
+
+.Cart-button{
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.Cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 @media (max-width: 767px) {
     .List1, .List2 {
         justify-content: space-around;
-        padding-left: 0; /* Adjust as needed */
-        padding-right: 0; /* Adjust as needed */
+        padding-left: 0;
+        padding-right: 0; 
     }
 
-    .cart-button {
+    .Cart-button-section {
         text-align: center;
         padding: 20px;
         justify-content: center;
-        padding-left: 0; /* Adjust as needed */
+        align-items: center; 
     }
 
     .bold h3 {
-        font-size: smaller; /* Adjust the size as needed */
+        font-size: smaller; 
     }
 
     .Yourcartname {

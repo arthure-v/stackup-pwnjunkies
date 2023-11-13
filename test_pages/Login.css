@@ -1,54 +1,5 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-
-.background {
-    width: 430px;
-    height: 520px;
-    position: relative;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-}
-
-.background .shape {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.shape:first-child {
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-
-h1{
-    color: #06EA2B;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: normal;
-    padding-left: 35px;
-}
-.shape:last-child {
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -30px;
-    bottom: -80px;
-}
-
-form {
+.Login-Form{
     height: 550px;
     width: 400px;
     background-color: rgba(8, 92, 61, 0.13);
@@ -63,7 +14,7 @@ form {
     padding: 50px 35px;
 }
 
-form * {
+.Login-Form {
     font-family: 'Poppins', sans-serif;
     color: #793636;
     letter-spacing: 0.5px;
@@ -71,21 +22,21 @@ form * {
     border: none;
 }
 
-form h3 {
+.Login-Form h3 {
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
     text-align: center;
 }
 
-label {
+.Login-Label {
     display: block;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
 }
 
-input {
+.Login-Input {
     display: block;
     height: 50px;
     width: 100%;
@@ -97,11 +48,9 @@ input {
     font-weight: 300;
 }
 
-::placeholder {
-    color: #e5e5e5;
-}
 
-.LogReg {
+
+.Login-Register-Button {
     margin-top: 50px;
     width: 100%;
     background-color: #ffffff;
@@ -113,15 +62,14 @@ input {
     cursor: pointer;
 }
 
-.social {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  
-  
-  .social .reg {
-    margin-left: 0px; 
-  }
-  
+@media(max-width:480px){
+    .Login-Form {
+        font-family: 'Poppins', sans-serif;
+        color: #793636;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+        width: 75%;
+        height: 75%;
+    }
+}

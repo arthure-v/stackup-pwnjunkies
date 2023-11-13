@@ -1,20 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LoginForm from './Login';
 import RegisterForm from './Register';
-import Admin from './Admin';
-import InputBoxComponent from './Home'
 import Viewmore from './Viewmore';
 import Profile from './Profile';
+import Home from './Home';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Cart from './Cart';
 import Termscondition from './Termscondition';
+import Productview from './Productview';
 
 
 
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
     element: <RegisterForm/>,
   },
   {
-    path: "Admin",
-    element: <Admin/>,
-  },
-  {
     path: "Cart",
     element: <Cart/>,
   },
@@ -51,6 +46,14 @@ const router = createBrowserRouter([
   {
     path: "Viewmore",
     element: <Viewmore/>,
+  },
+  {
+    path: "Home",
+    element: <Home/>,
+  },
+  {
+    path: "Productview",
+    element: <Productview/>,
   },
 ]);
 
