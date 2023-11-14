@@ -2,8 +2,8 @@ import React from 'react'
 import "./Cart.css";
 import Navbar from './Navbar';
 import{ useState } from 'react';
-import Home from './Home';
 import { Link } from 'react-router-dom'
+import Footer from './Footer';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
@@ -19,6 +19,7 @@ const Cart = () => {
   return (
     <div>
       <Navbar/>
+      <div className='Cart-Section'>
       <h1 className="Yourcartname">Your Cart</h1>
       <div className="List1">
         <h3 className="bold">Items</h3>
@@ -30,8 +31,8 @@ const Cart = () => {
         <div className="List2" key={item.id}>
           <h4 className="bold">{item.name}</h4>
           <h3 className="bold">${item.price}</h3>
-          <h3 className="bold">{item.quantity}</h3>
-          <h3 className="bold">${item.price * item.quantity}</h3>
+          <div className='Quantity-adjust'><h3 className="bold"><button className='Quantity-Button'>-</button>{item.quantity}<button className='Quantity-Button'>+</button></h3></div>
+          <h3 className="bold">${item.price * item.quantity}</h3> 
         </div>
       ))}
       <div className="Cart-button-section">
@@ -41,6 +42,9 @@ const Cart = () => {
       <div className="Cart-total">
         <h2>Total: ${calculateTotal()}</h2>
       </div>
+      
+      </div>
+      <Footer/>
     </div>
   );
 };

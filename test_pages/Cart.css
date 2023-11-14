@@ -43,6 +43,24 @@
     align-items: center;
 }
 
+.Quantity-Button{
+    padding:0px 4px 0 4px;
+    margin: 0 5px;
+    border-radius: 150px;
+}
+.Quantity-adjust{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    align-items: center;
+    width:80px;
+
+}
+
+.Cart-Section{
+    box-sizing: border-box;
+}
+
 
 
 @media (max-width: 767px) {

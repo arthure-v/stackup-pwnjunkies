@@ -28,7 +28,7 @@ label {
     color: #555;
 }
 
-input {
+.Register-input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -52,6 +52,6 @@ input {
 }
 
 
-button:hover {
+.Register-submit-button:hover {
     background-color: #0056b3;
 }

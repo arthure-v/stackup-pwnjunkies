@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Register.css';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
+
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -40,7 +42,7 @@ const RegisterForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="register-form">
           <label htmlFor="first_name">First Name:</label>
-          <input
+          <input className='Register-input'
             type="text"
             id="first_name"
             name="first_name"
@@ -52,7 +54,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="last_name">Last Name:</label>
-          <input
+          <input className='Register-input'
             type="text"
             id="last_name"
             name="last_name"
@@ -64,7 +66,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="email">Email:</label>
-          <input
+          <input className='Register-input'
             type="email"
             id="email"
             name="email"
@@ -76,7 +78,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="password">Password:</label>
-          <input
+          <input className='Register-input'
             type="password"
             id="password"
             name="password"
@@ -88,7 +90,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="confirm_password">Confirm Password:</label>
-          <input
+          <input className='Register-input'
             type="password"
             id="confirm_password"
             name="confirm_password"
@@ -100,7 +102,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="phone_number">Phone Number:</label>
-          <input
+          <input className='Register-input'
             type="tel"
             id="phone_number"
             name="phone_number"
@@ -112,7 +114,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="country">Country:</label>
-          <input
+          <input className='Register-input'
             type="text"
             id="country"
             name="country"
@@ -124,7 +126,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="state">State:</label>
-          <input
+          <input className='Register-input'
             type="text"
             id="state"
             name="state"
@@ -136,7 +138,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="district">District:</label>
-          <input
+          <input className='Register-input'
             type="text"
             id="district"
             name="district"
@@ -148,7 +150,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="building_name">Building Name:</label>
-          <input
+          <input className='Register-input'
             type="text"
             id="building_name"
             name="building_name"
@@ -160,7 +162,7 @@ const RegisterForm = () => {
 
         <div className="register-form">
           <label htmlFor="pincode">Pincode:</label>
-          <input
+          <input className='Register-input'
             type="text"
             id="pincode"
             name="pincode"
@@ -177,6 +179,7 @@ const RegisterForm = () => {
       </Link> 
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

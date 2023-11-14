@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './Profile.css';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Profile = () => {
   const [editMode, setEditMode] = useState({
@@ -140,6 +141,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

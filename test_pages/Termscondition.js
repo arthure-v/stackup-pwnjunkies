@@ -1,9 +1,12 @@
 import React from 'react';
 import "./Termscondition.css"
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function Termscondition() {
   return (
     <div>
+      <Navbar/>
       <h1 >Terms and Conditions</h1>
       <ol>
         <li>
@@ -86,6 +89,7 @@ For any queries or data deletion requests, contact us at  support@giftex.in.
         </li>
         {/* Include other terms similarly */}
       </ol>
+      <Footer/>
     </div>
   );
 }
